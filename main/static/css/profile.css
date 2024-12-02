@@ -1,0 +1,117 @@
+.profile-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.profile-container{
+  background: #161714;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(30,10,58,.04);
+}
+.profile-container-pic{
+    margin-left: 60px;
+}
+.profile-container-pic img{
+    width:100px;
+    height:100px
+    border-radius: 50px;
+}
+.profile-details{
+    width: 200px;
+    height:150px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.profile-details hr{
+    border: 0;
+    height: 1px;
+    background:#ccc;
+    margin: 15px 0 10px;
+}
+
+.mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: max-content;
+    margin-top: 5px;
+}
+
+.mobile img {
+ margin-right: 5px;
+}
+
+
+.email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: max-content;
+    margin-top: 5px;
+}
+
+.email img {
+    margin-right: 5px;
+   }
+
+   .home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: max-content;
+    margin-top: 5px;
+}
+
+.home img {
+    margin-right: 5px;
+   }
+
+
+.profile-form {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #161714;
+    color: #fff;
+}
+.profile-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.profile-form input[type="text"], .profile-form input[type="email"], .profile-form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.profile-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.profile-form button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile-form button:hover {
+    background-color: #0056b3;
+}

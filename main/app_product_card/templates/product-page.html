@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{product.product_name}}</title>
+    <link rel="stylesheet" href="{% static 'css/product-style.css' %}" type="text/css" />
+
+</head>
+
+<body>
+    <button class="exit" id="exit_button">&#8592</button>
+    <div class="product-container">
+  <div class="product-image-specs">
+    <img src="{{product.product_image}}" alt="">
+    <div class="specifications">
+      <ul>
+        <li>Коробка передач - {{product.transmission}}</li>
+        <li>Объем двигателя - {{product.engine_size}} литра</li>
+        <li>Привод - {{product.drive}}</li>
+        <li>Мощность - {{product.power}} л.с</li>
+        <li>Цвет - {{product.color}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-detail">
+    <div class="product-title">
+      <h2>{{product.product_name}}</h2>
+    </div>
+    <div class="product-description">
+      <span> {{product.product_description}}</span>
+    </div>
+    <div class="add-items">
+      <p>Add Items</p>
+      <button id="minus">−</button>
+      <input type="text" value="1" id="input" />
+      <button id="plus">+</button>
+    </div>
+    <div class="price">
+      <p id="product-value">{{product.product_price}}$</p>
+      <button class="buy-product">Buy Now</button>
+    </div>
+  </div>
+</div>
+    <script src="{% static '/js/script_card.js' %}"></script>
+</body>
+</html>

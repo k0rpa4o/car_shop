@@ -1,0 +1,33 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+<div style="max-width: 400px; margin: 50px auto; padding: 20px; border: 3px solid #161714; border-radius: 10px; color: #fff; background-color: #161714;">
+  <h2 style="text-align: center;">Register</h2>
+  <form method="post" style="display: flex; flex-direction: column;">
+    {% csrf_token %}
+
+    <div class="form-group">
+        {{ form.username.label_tag }} <br>
+        {{ form.username }} <br><br>
+    </div>
+
+    <div class="form-group">
+        {{ form.email.label_tag }} <br>
+        {{ form.email }} <br><br>
+    </div>
+
+    <div class="form-group">
+        {{ form.password1.label_tag }} <br>
+        {{ form.password1 }} <br><br>
+    </div>
+
+    <div class="form-group">
+        {{ form.password2.label_tag }} <br>
+        {{ form.password2 }} <br><br>
+    </div>
+
+    <button class="button_reg" type="submit">Register</button>
+  </form>
+</div>
+{% endblock %}

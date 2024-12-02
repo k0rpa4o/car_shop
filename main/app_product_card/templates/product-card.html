@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+<div class="main-container">
+    {% for prod in products %}
+    <div class="card-container">
+        <img src={{prod.product_image}} alt="" class="img_card">
+        <div class="card-detail">
+            <div class="title">
+                <p>{{prod.product_name}}</p>
+            </div>
+            <div class="description">
+                <span class="text"> {{prod.product_price}} $</span>
+            </div>
+            <div class="product-rating">
+                <button class="star-rating">&#9734</button>
+                <button class="star-rating">&#9734</button>
+                <button class="star-rating">&#9734</button>
+                <button class="star-rating">&#9734</button>
+                <button class="star-rating">&#9734</button>
+            </div>
+        </div>
+        <a href="{% url 'product' prod.product_name %}"><button class="view-product">View</button></a>
+    </div>
+    {%endfor%}
+</div>
+{% endblock %}

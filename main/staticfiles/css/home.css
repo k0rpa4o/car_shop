@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy";
+}
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: #4a235a;
+    color: #525252;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    background: #1a1a1a1a;
+    position: relative;
+}
+
+.logo {
+    width: 90px;
+    border-radius: 10px;
+}
+
+.profile-user-pic {
+    width: 80px;
+    border-radius: 20%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+nav ul {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.profile-sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.profile-sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.profile-sub-menu {
+    background: #161714;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.profile-user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile-user-info h3 {
+    font-weight: 100;
+    font-size: 30px;
+    color: #fff;
+}
+
+.profile-user-info h5 {
+    font-weight: 500;
+    top: 65%;
+    position: absolute;
+    left: 29%;
+    font-size: 20px;
+    color: #717d7e;
+}
+
+.profile-user-info img {
+    width: 60px;
+    border-radius: 20%;
+    margin-right: 15px;
+}
+
+.profile-sub-menu hr {
+    border: 0;
+    height: 1px;
+    background: #fff;
+    margin: 15px 0 10px;
+}
+
+.profile-sub-menu-link img {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 20%;
+    margin-right: 15px;
+}
+
+.profile-sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    margin: 12px 0;
+}
+
+.profile-sub-menu-link p {
+    width: 100%;
+}
+
+.register-login-menu {
+    display: flex;
+    align-items: center;
+    background-color: #161714;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #fff;
+    color: #161714;
+}
+
+.menu-separator {
+    margin: 0 5px;
+    color: #fff;
+}
+
+/* Стили для формы регистрации*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #4a235a;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button_reg{
+    padding: 10px 15px;
+    font-size: 17px;
+    border: 1px solid #fff;;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button_reg:hover {
+    background-color: #161714;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.button_reg:active {
+    transform: scale(0.98);
+}
+
+

@@ -1,0 +1,77 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{%static 'css/profile.css' %}">
+
+<div class="profile-page">
+    <div class="profile-container">
+        <div class="profile-container-pic">
+            {% if request.user.profile.profile_image %}
+            <img src="{{ request.user.profile.profile_image.url}}" alt="Profile Image">
+            {% else %}
+            <img src="{% static 'images/mypic.png' %}" alt="Default Image">
+            {% endif %}
+        </div>
+        <div class="profile-details">
+            <h3>{{ request.user.profile.full_name }}</h3>
+            <h5>{{ request.user.profile.designation }}</h5>
+            <hr>
+            <div class="text">
+                <div class="mobile">
+                    <img src="{% static 'images/phone.png' %}" alt="">
+                    <h5>{{ request.user.profile.mobile_number }}</h5>
+                </div>
+
+                <div class="email">
+                    <img src="{% static 'images/email.png' %}" alt="">
+                    <h5>{{ request.user.email }}</h5>
+                </div>
+
+                <div class="home">
+                    <img src="{% static 'images/house.png' %}" alt="">
+                    <h5>{{ request.user.profile.city }}, {{ request.user.profile.state }},
+                        {{request.user.profile.country }}</h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="profile-form">
+    <form action="#" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ form_data.name }}" required>
+
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" value="{{ form_data.designation }}" required>
+
+        <label for="mobile_no">Mobile Number:</label>
+        <input type="text" id="mobile_no" name="mobile_no" value="{{ form_data.mobile_no }}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ form_data.email }}" required>
+
+        <label for="profile_image">Profile Image:</label>
+        <input type="file" id="profile_image" name="profile_image">
+
+        <label for="profile_summary">Profile Summary:</label>
+        <textarea id="profile_summary" name="profile_summary" rows="3"
+            required>{{ form_data.profile_summary }}</textarea>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" value="{{ form_data.city }}" required>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" value="{{ form_data.state }}" required>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" value="{{ form_data.country }}" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock content %}
