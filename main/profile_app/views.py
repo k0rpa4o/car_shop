@@ -6,6 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from .models import Profile
 from django.core.files.base import ContentFile
+from django.http import HttpResponse
 
 
 class HomeView(View):
@@ -103,4 +104,8 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('login')
+
+
+def about(request):
+    return render(request, "about.html")
 

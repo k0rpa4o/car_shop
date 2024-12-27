@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="{%url 'home-page'%}">Home</a></li>
                 <li><a href="{%url 'all-product'%}">Car</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="{%url 'about'%}">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             {% if user.is_authenticated %}
@@ -77,10 +77,15 @@
             {% endif %}
         </nav>
         {% block content %}
+        <div class="home_div">
+            <p class="home_text">Добро пожаловать в наш автосалон "隼Hayabusa". Сдесь вы найдете автомобиль на свой вкус и цвет,
+            наши сотрудник вам помогут подобрать машину именно под ваш стиль езды и с удовольствием ответят
+            на все ваши вопросы!</p>
+        </div>
+
         {% endblock %}
     </div>
 
     <script src="{% static 'js/script.js' %}"></script>
 </body>
-
 </html>

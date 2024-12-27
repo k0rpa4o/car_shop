@@ -1,0 +1,41 @@
+.text_p {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Лёгкий градиентный фон */
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.text_p p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.text_p .link-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центровка содержимого по горизонтали */
+    gap: 10px; /* Расстояние между изображением и текстом */
+    margin-top: 5px;
+}
+
+.text_p img {
+    width: 30px;
+    height: 30px;
+}
+
+.text_p a {
+    font-size: 18px;
+    color: #0088cc;
+    text-decoration: none;
+    transition: color 0.5s; /* Анимация при наведении */
+    top: 10px;
+}
+
+.text_p a:hover {
+    color: #005f99;
+}
